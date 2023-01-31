@@ -15,7 +15,7 @@ async function getJoke(){
     const response = await fetch(apiURL, options);
     const data = await response.json();
 
-
-    console.log(data)
+    /* recebemos da API um objeto, dentro do pararenteses é o elemento e .joke a outra coisa dentro do elemento */
+    console.log(data[0].joke);
 }
 btnEl.addEventListener('click', getJoke)
